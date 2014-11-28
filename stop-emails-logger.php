@@ -17,7 +17,36 @@ if ( ! defined( 'WPINC' ) ) {
 
 // setup CPT
 add_action( 'init', 'fe_stop_emails_logger_cpt' );
-// add filter to log
+
+// add filter capture emails and log them as instances of CPT
+add_filter( 'fe_stop_emails_log', 'fe_stop_emails_logger_log' );
+
+// override template on display
+add_filter( 'template_include', 'fe_stop_emails_logger_template_include' );
+
+function fe_stop_emails_logger_template_include( $template ) {
+	if (
+		is_single() && 'fe_stopped_emails' === get_post_type()
+	) {
+		$template = dirname( __FILE__ ) . '/views/template.php';
+	}
+
+	return $template;
+}
+
+function fe_stop_emails_logger_log( $phpmailer ) {
+	$new_post = array(
+		'post_type'    => 'fe_stopped_emails',
+		'post_status'  => 'publish',
+		'post_title'   => $phpmailer->Subject,
+		'post_content' => $phpmailer->Body,
+	);
+	$post_id = wp_insert_post( $new_post );
+
+	$from_post_meta = $phpmailer->From;
+	update_post_meta( $post_id, 'Email_From', $from_post_meta );
+
+}
 
 
 function fe_stop_emails_logger_cpt() {
