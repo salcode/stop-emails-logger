@@ -12,16 +12,15 @@ Add-on to the Stop Emails plugin that logs blocked emails.
 == Description ==
 
 Creates a new Custom Post Type called "Stopped Emails" where
-emails blocked by the
-<a href="https://wordpress.org/plugins/stop-emails/">Stop Emails</a>
-plugin are logged.
+emails blocked by the [Stop Emails plugin](https://wordpress.org/plugins/stop-emails/)
+are logged.
 
-Built by <a href="//twitter.com/salcode">@salcode</a> / <a rel="author" href="https://plus.google.com/100823173217716320069">Sal Ferrarello</a>,
-<a href="http://salferrarello.com/">salferrarello.com</a>
+Built by [@salcode](https://twitter.com/salcode) / <a rel="author" href="https://plus.google.com/100823173217716320069">Sal Ferrarello</a>,
+[salferrarello.com](http://salferrarello.com/)
 
 == Installation ==
 
-1. Install and activate the <a href="https://wordpress.org/plugins/stop-emails/">Stop Emails plugin</a>
+1. Install and activate the [Stop Emails plugin](https://wordpress.org/plugins/stop-emails/)
 2. Install this plugin from WordPress plugin repository http://wordpress.org/plugins/
 3. Activate Stop Emails Logger through the 'Plugins' menu in WordPress.
 
