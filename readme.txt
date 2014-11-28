@@ -15,6 +15,8 @@ Creates a new Custom Post Type called "Stopped Emails" where
 emails blocked by the [Stop Emails plugin](https://wordpress.org/plugins/stop-emails/)
 are logged.
 
+Requires Stop Emails version 0.7 or above.
+
 Built by [@salcode](https://twitter.com/salcode) / <a rel="author" href="https://plus.google.com/100823173217716320069">Sal Ferrarello</a>,
 [salferrarello.com](http://salferrarello.com/)
 
